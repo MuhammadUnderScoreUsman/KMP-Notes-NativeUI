@@ -1,4 +1,4 @@
-# 📝 Kotlin Multiplatform Note App
+# 📝 Kotlin Multiplatform Note App with Native UI
 
 This is a **sample Kotlin Multiplatform project** featuring a simple **note-taking app** with shared business logic and **native UI implementations**:
 
