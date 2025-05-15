@@ -9,11 +9,16 @@ It demonstrates how to structure a KMP project with platform-specific UI layers 
 
 ---
 
+## 📸 Preview
+Check out the video demo to see the app in action:  
+<img src="screenshots/note_sample.png"/>
+
+---
+
 ## 📦 Features
-- Right Now it contains simple notes to demonstraint with Exandable Card feature.
+- Right Now it contains simple notes to demonstrate with Expandable Card feature.
 - Shared data and logic using Kotlin Multiplatform
 - Platform-native UI components
-- Clean project structure with separation of concerns
 
 ---
 
@@ -42,3 +47,10 @@ It demonstrates how to structure a KMP project with platform-specific UI layers 
 #### iOS
 1. Open the `iosApp` project in Xcode
 2. Run on a simulator or device
+
+## ✅ TODO
+
+- [ ] Add SQLDelight integration in shared module
+- [ ] Implement full CRUD operations using SQLDelight
+- [ ] Sync notes across platforms using a shared database layer
+- [ ] Add basic UI tests for both platforms
