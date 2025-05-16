@@ -10,7 +10,7 @@ It demonstrates how to structure a KMP project with platform-specific UI layers 
 ---
 
 ## 📸 Preview
-Check out the video demo to see the app in action:  
+Check out the demo to see the app in action:  
 <img src="screenshots/note_sample.png"/>
 
 ---
