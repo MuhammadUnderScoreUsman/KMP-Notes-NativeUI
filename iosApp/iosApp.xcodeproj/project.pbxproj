@@ -10,7 +10,13 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		E428CF3E2DDC525A00ECAE86 /* UpsertNoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428CF3D2DDC525A00ECAE86 /* UpsertNoteScreen.swift */; };
+		E428CF412DDC574300ECAE86 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428CF402DDC574300ECAE86 /* NoteListScreen.swift */; };
+		E48152BA2DF023BB00FAFCD7 /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48152B92DF023BB00FAFCD7 /* ColorHex.swift */; };
+		E48152BC2DF02DF700FAFCD7 /* StaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48152BB2DF02DF700FAFCD7 /* StaggeredGrid.swift */; };
+		E48152BE2DF0622C00FAFCD7 /* FromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48152BD2DF0622C00FAFCD7 /* FromHex.swift */; };
+		E48152C12DF082B200FAFCD7 /* 64ToLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48152C02DF082B200FAFCD7 /* 64ToLong.swift */; };
+		E48152C32DF839BB00FAFCD7 /* KtLongTo64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48152C22DF839BB00FAFCD7 /* KtLongTo64.swift */; };
 		E4A0BB5B2DD5D156004F10FC /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BB5A2DD5D156004F10FC /* NoteViewModel.swift */; };
 		E4A0BB5D2DD5E19C004F10FC /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BB5C2DD5E19C004F10FC /* ExpandableTextView.swift */; };
 		E4A0BB5F2DD5F7CA004F10FC /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BB5E2DD5F7CA004F10FC /* NoteCard.swift */; };
@@ -34,8 +40,14 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E428CF3D2DDC525A00ECAE86 /* UpsertNoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsertNoteScreen.swift; sourceTree = "<group>"; };
+		E428CF402DDC574300ECAE86 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
+		E48152B92DF023BB00FAFCD7 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		E48152BB2DF02DF700FAFCD7 /* StaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGrid.swift; sourceTree = "<group>"; };
+		E48152BD2DF0622C00FAFCD7 /* FromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromHex.swift; sourceTree = "<group>"; };
+		E48152C02DF082B200FAFCD7 /* 64ToLong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 64ToLong.swift; sourceTree = "<group>"; };
+		E48152C22DF839BB00FAFCD7 /* KtLongTo64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KtLongTo64.swift; sourceTree = "<group>"; };
 		E4A0BB5A2DD5D156004F10FC /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		E4A0BB5C2DD5E19C004F10FC /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 		E4A0BB5E2DD5F7CA004F10FC /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
@@ -80,14 +92,15 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E48152BF2DF0827900FAFCD7 /* extensions */,
+				E4B0E6932DEAD2F90052B02C /* component */,
+				E428CF3F2DDC573400ECAE86 /* note_screen */,
+				E428CF3C2DDC523800ECAE86 /* add_note_screen */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				E4A0BB5A2DD5D156004F10FC /* NoteViewModel.swift */,
-				E4A0BB5C2DD5E19C004F10FC /* ExpandableTextView.swift */,
-				E4A0BB5E2DD5F7CA004F10FC /* NoteCard.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -97,6 +110,43 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E428CF3C2DDC523800ECAE86 /* add_note_screen */ = {
+			isa = PBXGroup;
+			children = (
+				E428CF3D2DDC525A00ECAE86 /* UpsertNoteScreen.swift */,
+			);
+			path = add_note_screen;
+			sourceTree = "<group>";
+		};
+		E428CF3F2DDC573400ECAE86 /* note_screen */ = {
+			isa = PBXGroup;
+			children = (
+				E428CF402DDC574300ECAE86 /* NoteListScreen.swift */,
+			);
+			path = note_screen;
+			sourceTree = "<group>";
+		};
+		E48152BF2DF0827900FAFCD7 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E48152B92DF023BB00FAFCD7 /* ColorHex.swift */,
+				E48152BD2DF0622C00FAFCD7 /* FromHex.swift */,
+				E48152C02DF082B200FAFCD7 /* 64ToLong.swift */,
+				E48152C22DF839BB00FAFCD7 /* KtLongTo64.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		E4B0E6932DEAD2F90052B02C /* component */ = {
+			isa = PBXGroup;
+			children = (
+				E4A0BB5E2DD5F7CA004F10FC /* NoteCard.swift */,
+				E4A0BB5C2DD5E19C004F10FC /* ExpandableTextView.swift */,
+				E48152BB2DF02DF700FAFCD7 /* StaggeredGrid.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E428CF3E2DDC525A00ECAE86 /* UpsertNoteScreen.swift in Sources */,
+				E428CF412DDC574300ECAE86 /* NoteListScreen.swift in Sources */,
+				E48152BC2DF02DF700FAFCD7 /* StaggeredGrid.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				E48152C12DF082B200FAFCD7 /* 64ToLong.swift in Sources */,
 				E4A0BB5F2DD5F7CA004F10FC /* NoteCard.swift in Sources */,
 				E4A0BB5B2DD5D156004F10FC /* NoteViewModel.swift in Sources */,
+				E48152BE2DF0622C00FAFCD7 /* FromHex.swift in Sources */,
+				E48152C32DF839BB00FAFCD7 /* KtLongTo64.swift in Sources */,
+				E48152BA2DF023BB00FAFCD7 /* ColorHex.swift in Sources */,
 				E4A0BB5D2DD5E19C004F10FC /* ExpandableTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

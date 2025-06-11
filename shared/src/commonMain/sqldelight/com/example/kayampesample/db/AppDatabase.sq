@@ -1,0 +1,27 @@
+import kotlin.Boolean;
+
+CREATE TABLE TodoEntity(
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    isImportant INTEGER AS Boolean DEFAULT 0,
+    color TEXT NOT NULL
+);
+
+upsert:
+INSERT OR REPLACE INTO TodoEntity(id, title, body, isImportant, color)
+VALUES(?,?,?,?,?);
+
+allNotes:
+SELECT * FROM TodoEntity;
+
+deleteAll:
+DELETE FROM TodoEntity;
+
+searchViaTitle:
+SELECT * FROM TodoEntity
+WHERE title LIKE LOWER('%' || ? || '%');
+
+deleteNote:
+DELETE FROM TodoEntity
+WHERE id = ?;

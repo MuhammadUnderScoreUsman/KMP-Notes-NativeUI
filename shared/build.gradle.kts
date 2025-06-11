@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.sqldelight)
 }
 
 kotlin {
@@ -15,7 +16,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -23,14 +24,28 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
-            isStatic = true
+            isStatic = false
+            linkerOpts.add("-lsqlite3")
         }
     }
 
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
+            implementation(libs.runtime)
+            implementation(libs.kotlinx.coroutines.core)
         }
+
+        androidMain.dependencies {
+            implementation(libs.android.driver)
+
+        }
+
+        iosMain.dependencies {
+            implementation(libs.native.driver)
+
+        }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
@@ -47,4 +62,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+}
+
+
+sqldelight {
+    databases {
+        create("AppDatabase") {
+            packageName.set("com.example.kayampesample")
+        }
+    }
+    linkSqlite.set(true)
 }
